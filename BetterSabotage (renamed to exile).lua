@@ -708,7 +708,7 @@ lplayer.Chatted:Connect(function(msg)
             end
         end
     elseif string.sub(msg:lower(), 0, 5) == "exile" then -- Attempt to kinda kick someone
-        local player = string.sub(msg:lower(), 17)
+        local player = string.sub(msg:lower(), 7)
         if shared.mod == true then
             game.Players:Chat("punish "..player)
             game.Players:Chat("blind/"..player)
@@ -735,7 +735,8 @@ lplayer.Chatted:Connect(function(msg)
 
                 end
                 end
-                wait(5)
+            end)
+            task.spawn(function()
                 shared.spam1 = true
                 wait(10)
                 shared.spam2 = true
@@ -744,6 +745,7 @@ lplayer.Chatted:Connect(function(msg)
             pcall(function()
                 fireclickdetector(game:GetService("Workspace").Terrain["_Game"].Admin.Regen.ClickDetector, 0)
             end)
+            wait(.35)
             for i = 1, 350 do
                 game.Players:Chat("pm/"..player.." \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n😆😊😅😀🙃😝😇😇😇🙃😇🙂🤣🤣😆😆😇😃😜😀😝🤪😀😝😄😉😅🤪\n🤪😀😆🤪😆😇😅😉🤣🤪🤣🙂😅😅😁😄😉😀😊🤪😇😄😇😀😝😀😊\n😇😝🤪😜😊😆🙂🤪🤣😜😅😀🙂😀😃🤪😜😁😝😆😊😅😀😆😊😅😀🙃😝😇😇😇🙃😇🙂🤣🤣😆😆😇😃😜😀😝🤪😀😝😄😉😅🤪\n🤪😀😆🤪😆😇😅😉🤣🤪🤣🙂😅😅😁😄😉😀😊🤪😇😄😇😀😝😀😊\n😇😝🤪😜😊😆🙂🤪🤣😜😅😀🙂😀😃🤪😜😁😝😆😊😅😀😆😊😅😀🙃😝😇😇😇🙃😇🙂🤣🤣😆😆😇😃😜😀😝🤪😀😝😄😉😅🤪\n🤪😀😆🤪😆😇😅😉🤣🤪🤣🙂😅😅😁😄😉😀😊🤪😇😄😇😀😝😀😊\n😇😝🤪😜😊😆🙂🤪🤣😜😅😀🙂😀😃🤪😜😁🤪😜😁🤪🤪\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
             end
