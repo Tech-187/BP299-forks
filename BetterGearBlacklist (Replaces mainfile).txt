@@ -41,7 +41,7 @@ local lplayer = game.Players.LocalPlayer
 local userId = game.Players.LocalPlayer.UserId
 local connections = {} -- If you're gonna alter the script then please add any connections that you add to a table so it can be closed with the !closemod command
 local gearcons = {}
-getgenv().BlacklistedGear = {"VampireVanquisher","IvoryPeriastron","PaintBucket","SubspaceTripmine","Transmorpher","LaserFingerPointers","SeaThemedCrossbow","RageTable","IceStaff","AzureDragonMagicSlayerSword","ViridianThrowingKnives","PrettyPrettyPrincessSceptor","OrinthianSwordAndShield","AR","AlienEgg","BarrelOfMonkeys","AnAlpacaYouKnow","BoneSword","WormholeTunneler","GiantAnimeHammer","FakeChartreusePeriastron","SkeletonScythe","BlizzardWand","SentryTurret","StatueStaffOfStonyJustice","TacticalAirstrike","Tactical Airstrike","Easterbomby","RainbowPeriastron"} -- You can find the tool names using this script https://raw.githubusercontent.com/Tech-187/Lua-scripts/main/Inventory%20tool%20checker
+getgenv().BlacklistedGear = {"VampireVanquisher","IvoryPeriastron","PaintBucket","SubspaceTripmine","Transmorpher","LaserFingerPointers","SeaThemedCrossbow","RageTable","IceStaff","AzureDragonMagicSlayerSword","ViridianThrowingKnives","PrettyPrettyPrincessSceptor","OrinthianSwordAndShield","AR","AlienEgg","BarrelOfMonkeys","AnAlpacaYouKnow","BoneSword","WormholeTunneler","GiantAnimeHammer","FakeChartreusePeriastron","SkeletonScythe","BlizzardWand","SentryTurret","StatueStaffOfStonyJustice","TacticalAirstrike","Tactical Airstrike","Easterbomby","RainbowPeriastron","RemoteExplosiveDetonator","BeachUmbrella","ChickThrowingStars","CloverThrowingStars","GoldShuriken","MetallicThrowingKnives","NeonNinjaThrowingStars","TransparentThrowingStars","InstantTreehouse"} -- findtool gearcloner - fast gearname finder without exploits
 getgenv().gearwhitelisted = {"Master0fSouIs","ScaleneSoap9803","t_echr","Humangas","ovicaI","Ba_lIon","naomicaesar","jjjuuikjjikkju","SoaringLys","Di33le2","jhjssikeksms"} -- Players that are in this table won't get ungeared by default.
 local mousee = game.Players.LocalPlayer:GetMouse()
 local queueteleport = syn and syn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport or function() end
@@ -55,7 +55,7 @@ shared.padgrab = false -- Set this to true if your account has no perm
 shared.displayon = false -- Display name converter. It has downsides when it's active
 shared.autoswitch = true -- This will automatically switch with !s if you can't get real admin in a server, use this if your acc only has Person299 and not perm
 
-getgenv().GEARANNOUNCE = false
+getgenv().GEARANNOUNCE = true
 
 -- Those have to be toggled on or of before injection. Don't enable both, just one or the other
 local gearbl1 = true -- Strict gear blacklist (spammy but blocks everything)
